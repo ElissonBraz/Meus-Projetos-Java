@@ -1,10 +1,17 @@
 package classes;
 
 public class NomeCarros {
-    private String nome;
 
-    public NomeCarros(String nome) {
+    private String nome;
+    private double preco;
+
+    public NomeCarros () {
+
+    } 
+
+    public NomeCarros(String nome, double preco) {
         this.nome = nome;
+        this.preco = preco;
     }
 
     public String getNome() {
@@ -15,10 +22,22 @@ public class NomeCarros {
         this.nome = nome;
     }
 
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
     @Override
     public String toString() {
-        return "" + nome + "";
+        return nome + ", " + preco;
     }
+
+    
+    
+
 
     
 }
