@@ -39,7 +39,7 @@ public class LocadoraCarros implements Carros{
         System.out.println("bem vindo a locadora fuctura");
         System.out.println("========");
         System.out.println("o que você deseja fazer?");
-        System.out.println("0 - mostrar portifólio | 1 - alugar um carro | 2 - devolver um carro");
+        System.out.println("0 - mostrar portifólio | 1 - alugar um carro | 2 - devolver um carro | 3 - sair ");
 
         }
 
