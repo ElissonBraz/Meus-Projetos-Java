@@ -3,7 +3,7 @@ package entities;
 import java.util.Locale;
 import java.util.Scanner;
 
-import controler.ContMarkup;
+import controller.ContMarkup;
 
 public class CalculoVenda implements ContMarkup {
 

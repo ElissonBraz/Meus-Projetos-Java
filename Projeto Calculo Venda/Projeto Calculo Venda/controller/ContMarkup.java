@@ -1,4 +1,4 @@
-package controler;
+package controller;
 
 public interface ContMarkup {
     public abstract void inicioSistema();
