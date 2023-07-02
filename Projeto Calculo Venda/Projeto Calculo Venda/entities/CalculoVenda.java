@@ -1,6 +1,5 @@
 package entities;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 import controller.ContMarkup;
@@ -94,7 +93,6 @@ public class CalculoVenda implements ContMarkup {
 
     @Override
     public void formulaMarkup() {
-        Locale.setDefault(Locale.US);
         Scanner ent = new Scanner(System.in);
 
         System.out.println();
@@ -116,9 +114,9 @@ public class CalculoVenda implements ContMarkup {
         double precoVenda = this.getCustoUni() * formula;
 
         System.out.println();
-        System.out.println(String.format("Valor do Markup: %.3f", formula));
+        System.out.println(String.format("Valor do Markup: R$ %.3f", formula) + " Reais");
         System.out.println();
-        System.out.println(String.format("Valor de Venda Proposto: %.2f", precoVenda));
+        System.out.println(String.format("Valor de Venda Proposto: R$ %.2f", precoVenda) + " Reais");
         System.out.println();
 
         while (this.getLogica().equals(true)) {
