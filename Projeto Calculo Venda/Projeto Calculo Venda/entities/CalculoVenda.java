@@ -74,16 +74,23 @@ public class CalculoVenda implements ContMarkup {
             System.out.println("1 - Calculo | 2 - Sair");
             int opcao = ent.nextInt();
 
-            if (opcao == 1) {
-                this.formulaMarkup();
-                this.setLogica(false);
-                System.out.println("Obrigado por usar o Sistema!");
-            } else if (opcao == 2) {
-                this.setLogica(false);
-                System.out.println("Obrigado por usar o Sistema!");
-            } else {
-                System.out.println("Digite uma opção valida!");
-                this.inicioSistema();
+            switch (opcao) {
+                case 1:
+                    this.formulaMarkup();
+                    this.setLogica(false);
+                    System.out.println("Obrigado por usar o Sistema!");
+                    break;
+
+                case 2:
+                    this.setLogica(false);
+                    System.out.println("Obrigado por usar o Sistema!");
+
+                    break;
+
+                default:
+                    System.out.println("Digite uma opção valida!");
+                    this.inicioSistema();
+                    break;
             }
 
             ent.close();
@@ -125,15 +132,22 @@ public class CalculoVenda implements ContMarkup {
             System.out.println("Digite 1 - Sim | Digite 2 - Não");
             int numero = ent.nextInt();
 
-            if (numero == 1) {
-                this.formulaMarkup();
-            } else if (numero == 2) {
-                this.setLogica(false);
-            } else {
-                System.out.println("Digite uma opção valida!");
-                System.out.println();
-                this.setLogica(true);
+            switch (numero) {
+                case 1:
+                    this.formulaMarkup();
+                    break;
+
+                case 2:
+                    this.setLogica(false);
+                    break;
+
+                default:
+                    System.out.println("Digite uma opção valida!");
+                    System.out.println();
+                    this.setLogica(true);
+                    break;
             }
+
         }
 
         ent.close();
